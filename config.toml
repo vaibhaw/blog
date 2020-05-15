@@ -12,13 +12,13 @@ disqusShortname = "XXX"
     disable = true
 
 [Privacy.googleAnalytics]
-    anonymizeIP = true
-    respectDoNotTrack = true
+    anonymizeIP = false
+    respectDoNotTrack = false
     useSessionStorage = false
 
 [Author]
     name = "Vaibhaw Singh Chandel"
-    profile = "https://google.com/+VaibhawSinghChandel"
+    profile = "https://vaibhawchandel.github.io"
 
 [Taxonomies]
     tag = "tags"
@@ -30,9 +30,10 @@ disqusShortname = "XXX"
     github = "https://github.com/vaibhawchandel"
     gitlab = "https://gitlab.com/vaibhawchandel"
     linkedin = "https://linkedin.com/in/vaibhaw/"
-    # gplus = "https://google.com/+VaibhawSinghChandel"
     twitter = "https://twitter.com/vaibhaw"
     stackoverflow = "https://stackoverflow.com/users/875484/vaibhaw"
+    lastfm = "https://www.last.fm/user/vaibhawchandel"
+    8tracks = "https://8tracks.com/vaibhaw"
     email = "chandel.vaibhaw@gmail.com"
     opengraph = true
     shareTwitter = true
@@ -52,26 +53,31 @@ disqusShortname = "XXX"
     weight = 1
 
 [[menu.main]]
+    name = "Projects"
+    url = "/projects/"
+    weight = 2
+
+[[menu.main]]
     name = "Blog"
     url = "/posts/"
-    weight = 2
+    weight = 3
 
 [[menu.main]]
     name = "Notes"
     url = "/notes/"
-    weight = 3
+    weight = 4
 
 [[menu.main]]
     name = "Tutorials"
     url = "/tutorials/"
-    weight = 4
+    weight = 5
 
 [[menu.main]]
     name = "Contact"
     url = "/page/contact/"
-    weight = 5
+    weight = 6
 
 [[menu.main]]
     name = "About"
     url = "/page/about/"
-    weight = 6
+    weight = 7
