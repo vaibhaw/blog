@@ -5,6 +5,8 @@ languageCode = "en-us"
 copyright = "Vaibhaw Singh Chandel"
 googleAnalytics = "XXX"
 disqusShortname = "XXX"
+pygmentsUseClasses = true
+pygmentsCodefences = true
 
 [Privacy]
 
@@ -31,9 +33,10 @@ disqusShortname = "XXX"
     gitlab = "https://gitlab.com/vaibhawchandel"
     linkedin = "https://linkedin.com/in/vaibhaw/"
     twitter = "https://twitter.com/vaibhaw"
+    facebook = "https://www.facebook.com/vaibhaw"
     stackoverflow = "https://stackoverflow.com/users/875484/vaibhaw"
     lastfm = "https://www.last.fm/user/vaibhawchandel"
-    8tracks = "https://8tracks.com/vaibhaw"
+    atetracks = "https://8tracks.com/vaibhaw"
     email = "chandel.vaibhaw@gmail.com"
     opengraph = true
     shareTwitter = true

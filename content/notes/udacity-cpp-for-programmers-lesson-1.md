@@ -3,6 +3,7 @@ title: "Udacity: C++ for Programmers - Lesson 1"
 description: ""
 author: "Vaibhaw Singh Chandel"
 date: 2018-08-13T07:28:12-04:00
+tags: ["C++", "Udacity", "MOOC"]
 draft: true
 ---
 
