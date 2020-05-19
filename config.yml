@@ -1,4 +1,4 @@
-baseurl: "https://vaibhawchandel.github.io/blog/"
+baseurl: "https://vaibhaw.github.io/blog/"
 title: Vaibhaw's Tech Musings
 theme: ghostwriter
 languageCode: en-us
@@ -29,7 +29,7 @@ privacy:
 
 author:
   name: Vaibhaw Singh Chandel
-  profile: "https://vaibhawchandel.github.io"
+  profile: "https://vaibhaw.github.io"
 
 taxonomies:
   tag: tags
@@ -44,7 +44,7 @@ params:
   title: My encounters with programming, technology and gadgets
   # enabling description => ugly uppercase text
   # description: My encounters with programming, technology and gadgets
-  github: "https://github.com/vaibhawchandel"
+  github: "https://github.com/vaibhaw"
   gitlab: "https://gitlab.com/vaibhaw"
   linkedin: "https://linkedin.com/in/vaibhaw/"
   twitter: "https://twitter.com/vaibhaw"
