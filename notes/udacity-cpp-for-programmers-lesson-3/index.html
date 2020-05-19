@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns#">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Udacity: C&#43;&#43; for Programmers Lesson 3 &middot; Vaibhaw Singh Chandel</title>
+        <meta name="description" content="Lesson 3: Arithmetic Operators 3.3 Arithmetic Operations #include &lt;cmath&gt;// &#43; - * / % // % is called modulo // std::pow(5, 4) // = 625 // value of PI // M_PI 3.6 Implicit Assignment // integer can be assigned to a float // integer can be treated as a char // float can be assigned to int (with truncation) // float can be assigned to char but it prints wierd on terminal - TODO read more about it  int a = 4; int b = 8; int c = a/b; // == 0 float d = a/b; // == 0 float d = a*1.">
+        <meta name="HandheldFriendly" content="True">
+        <meta name="MobileOptimized" content="320">
+        <meta name="generator" content="Hugo 0.69.2" />
+        <meta name="robots" content="index,follow">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta property="og:title" content="Udacity: C&#43;&#43; for Programmers Lesson 3">
+<meta property="og:description" content="Lesson 3: Arithmetic Operators 3.3 Arithmetic Operations #include &lt;cmath&gt;// &#43; - * / % // % is called modulo // std::pow(5, 4) // = 625 // value of PI // M_PI 3.6 Implicit Assignment // integer can be assigned to a float // integer can be treated as a char // float can be assigned to int (with truncation) // float can be assigned to char but it prints wierd on terminal - TODO read more about it  int a = 4; int b = 8; int c = a/b; // == 0 float d = a/b; // == 0 float d = a*1.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://vaibhaw.github.io/blog/notes/udacity-cpp-for-programmers-lesson-3/">
+        <link rel="stylesheet" href="https://vaibhaw.github.io/blog/dist/site.css">
+        <link rel="stylesheet" href="https://vaibhaw.github.io/blog/dist/syntax.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,600,700,300&subset=latin,cyrillic-ext,latin-ext,cyrillic">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+        
+        <link rel="stylesheet" href="https://vaibhaw.github.io/blog//site.css">
+
+        
+        
+    </head>
+    <body>
+        
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'XXX', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+
+        <div id="wrapper">
+            <header class="site-header">
+                <div class="container">
+                    <div class="site-title-wrapper">
+                        
+                            <a class="site-logo" title="Vaibhaw&#39;s Tech Musings" href="https://vaibhaw.github.io/blog/">
+                                <img src="https://vaibhaw.github.io/blog/logo.svg" alt="Vaibhaw&#39;s Tech Musings" />
+                            </a>
+                        
+
+                    </div>
+
+                    <ul class="site-nav">
+                        
+    <li class="site-nav-item">
+        <a title="Home" href="/blog/">Home</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a title="Projects" href="/blog/projects/">Projects</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a title="Blog" href="/blog/posts/">Blog</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a title="Notes" href="/blog/notes/">Notes</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a title="Tutorials" href="/blog/tutorials/">Tutorials</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a title="Contact" href="/blog/page/contact/">Contact</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a title="About" href="/blog/page/about/">About</a>
+    </li>
+
+                    </ul>
+                </div>
+            </header>
+
+            <div id="container">
+
+
+<div class="container">
+    <article class="post-container">
+        <header class="post-header">
+    <h1 class="post-title">Udacity: C&#43;&#43; for Programmers Lesson 3</h1>
+    
+</header>
+
+        <div class="post-content clearfix">
+    
+
+    <h2 id="lesson-3-arithmetic-operators">Lesson 3: Arithmetic Operators</h2>
+<h3 id="33-arithmetic-operations">3.3 Arithmetic Operations</h3>
+<div class="highlight"><pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="cp">#include</span> <span class="cpf">&lt;cmath&gt;</span><span class="cp">
+</span><span class="cp"></span><span class="c1">// + - * / %
+</span><span class="c1">// % is called modulo
+</span><span class="c1">// std::pow(5, 4) // = 625
+</span><span class="c1">// value of PI // M_PI
+</span></code></pre></div><h3 id="36-implicit-assignment">3.6 Implicit Assignment</h3>
+<div class="highlight"><pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="c1">// integer can be assigned to a float
+</span><span class="c1">// integer can be treated as a char
+</span><span class="c1">// float can be assigned to int (with truncation)
+</span><span class="c1">// float can be assigned to char but it prints wierd on terminal  - TODO read more about it
+</span><span class="c1"></span>
+<span class="kt">int</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">4</span><span class="p">;</span>
+<span class="kt">int</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">8</span><span class="p">;</span>
+
+<span class="kt">int</span> <span class="n">c</span> <span class="o">=</span> <span class="n">a</span><span class="o">/</span><span class="n">b</span><span class="p">;</span> <span class="c1">// == 0
+</span><span class="c1"></span><span class="kt">float</span> <span class="n">d</span> <span class="o">=</span> <span class="n">a</span><span class="o">/</span><span class="n">b</span><span class="p">;</span> <span class="c1">// == 0
+</span><span class="c1"></span><span class="kt">float</span> <span class="n">d</span> <span class="o">=</span> <span class="n">a</span><span class="o">*</span><span class="mf">1.0</span><span class="o">/</span><span class="n">b</span><span class="p">;</span> <span class="c1">// == 0.5
+</span></code></pre></div><h3 id="311-prefix-and-postfix">3.11 Prefix and Postfix</h3>
+<p>Prefix operators:</p>
+<ul>
+<li>increment the value of the variable, then</li>
+<li>return the reference to the variable.</li>
+</ul>
+<p>Postfix operators:</p>
+<ul>
+<li>create a copy of the variable</li>
+<li>increments the value of the variable, then</li>
+<li>returns a copy from BEFORE the increment.</li>
+</ul>
+<h3 id="313-assignment-operators">3.13 Assignment Operators</h3>
+<p>+= -= *= /= %=</p>
+<h2 id="lesson-4-control-flow">Lesson 4: Control Flow</h2>
+<h3 id="relational-operators">Relational Operators</h3>
+<p>== != &gt; &lt; &gt;= &lt;=</p>
+<h3 id="logic-operators">Logic Operators</h3>
+<p>and &amp;&amp;
+or ||
+not !</p>
+
+</div>
+
+        <footer class="post-footer clearfix">
+    
+
+    <div class="share">
+        
+            <a class="icon-twitter" href="https://twitter.com/share?text=Udacity%3a%20C%2b%2b%20for%20Programmers%20Lesson%203&url=https%3a%2f%2fvaibhaw.github.io%2fblog%2fnotes%2fudacity-cpp-for-programmers-lesson-3%2f"
+                onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                <i class="fa fa-twitter"></i>
+                <span class="hidden">Twitter</span>
+            </a>
+        
+
+        
+            <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fvaibhaw.github.io%2fblog%2fnotes%2fudacity-cpp-for-programmers-lesson-3%2f"
+                onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                <i class="fa fa-facebook"></i>
+                <span class="hidden">Facebook</span>
+            </a>
+        
+
+        
+        
+            <a class="icon-linkedin" href="https://www.linkedin.com/shareArticle?mini=true&title=Udacity%3a%20C%2b%2b%20for%20Programmers%20Lesson%203&url=https%3a%2f%2fvaibhaw.github.io%2fblog%2fnotes%2fudacity-cpp-for-programmers-lesson-3%2f&summary="
+               onclick="window.open(this.href, 'linkedin-share', 'width=554,height=481');return false;">
+               <i class="fa fa-linkedin"></i>
+               <span class="hidden">LinkedIn</span>
+            </a>
+        
+    </div>
+</footer>
+    </article>
+</div>
+
+            </div>
+        </div>
+
+        <footer class="footer">
+            <div class="container">
+                <div class="site-title-wrapper">
+                    <h1 class="site-title">
+                        <a title="Vaibhaw&#39;s Tech Musings" href="https://vaibhaw.github.io/blog/">Vaibhaw&#39;s Tech Musings</a>
+                    </h1>
+                    <a class="button-square" href="https://vaibhaw.github.io/blog/index.xml"><i class="fa fa-rss"></i></a>
+                    
+                        <a class="button-square button-social hint--top" data-hint="Github" title="Github" href="https://github.com/vaibhaw" rel="me">
+                            <i class="fa fa-github-alt"></i>
+                        </a>
+                    
+
+                    
+                        <a class="button-square button-social hint--top" data-hint="Gitlab" title="Gitlab" href="https://gitlab.com/vaibhaw" rel="me">
+                            <i class="fa fa-gitlab"></i>
+                        </a>
+                    
+
+                    
+                        <a class="button-square button-social hint--top" data-hint="Stack Overflow" title="Stack Overflow" href="https://stackoverflow.com/users/875484/vaibhaw" rel="me">
+                            <i class="fa fa-stack-overflow"></i>
+                        </a>
+                    
+
+                    
+                        <a class="button-square button-social hint--top" data-hint="Twitter" title="Twitter" href="https://twitter.com/vaibhaw" rel="me">
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                    
+                    
+                        <a class="button-square button-social hint--top" data-hint="Facebook" title="Facebook" href="https://www.facebook.com/vaibhaw" rel="me">
+                            <i class="fa fa-facebook"></i>
+                        </a>
+                    
+
+                    
+                        <a class="button-square button-social hint--top" data-hint="Last.fm" title="Last.fm" href="https://www.last.fm/user/vaibhawchandel" rel="me">
+                            <i class="fa fa-lastfm"></i>
+                        </a>
+                    
+
+                    
+                        <a class="button-square button-social hint--top" data-hint="8tracks" title="8tracks" href="https://8tracks.com/vaibhaw" rel="me">
+                            <i class="fa fa-music"></i>
+                        </a>
+                                            
+
+                    
+                        <a class="button-square button-social hint--top" data-hint="LinkedIn" title="LinkedIn" href="https://linkedin.com/in/vaibhaw/" rel="me">
+                            <i class="fa fa-linkedin"></i>
+                        </a>
+                    
+                    
+                        <a class="button-square button-social hint--top" data-hint="Email" title="Email" href="mailto:chandel.vaibhaw@gmail.com">
+                            <i class="fa fa-envelope"></i>
+                        </a>
+                    
+
+                    <a class="button-square button-jump-top js-jump-top" href="#">Top
+                        <i class="fa fa-angle-up"></i>
+                    </a>
+
+                </div>
+
+                <p class="footer-copyright">
+                    <span class="footer-copyright-left">&copy; 2020 Vaibhaw Chandel</span>
+                
+                    <span class="footer-copyright-right">
+                        Powered by <a href="https://gohugo.io/">Hugo</a> | 
+                        Theme: <a href="https://github.com/jbub/ghostwriter">Ghostwriter</a>
+                    </span>
+                </p>
+            </div>
+        </footer>
+
+        <script src="https://vaibhaw.github.io/blog/js/jquery-1.11.3.min.js"></script>
+        <script src="https://vaibhaw.github.io/blog/js/jquery.fitvids.js"></script>
+        <script src="https://vaibhaw.github.io/blog/js/scripts.js"></script>
+    </body>
+</html>
+

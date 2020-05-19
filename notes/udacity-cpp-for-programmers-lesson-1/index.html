@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns#">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Udacity: C&#43;&#43; for Programmers - Lesson 1 &middot; Vaibhaw Singh Chandel</title>
+        <meta name="description" content="Lesson 1: Basics 1.4 What makes C&#43;&#43; different?  works directly on hardware really strong abstraction mechanisms  1.6 Textbook  The C&#43;&#43; Programming Language - 4th Edition - good for professionals or people who already know how to code Programming: Principles and Practice Using C&#43;&#43; - 2nd Edition - good for people who don&rsquo;t know how to code A Tour of C&#43;&#43; - quick overview of C&#43;&#43; for people who already know C&#43;&#43;  1.">
+        <meta name="HandheldFriendly" content="True">
+        <meta name="MobileOptimized" content="320">
+        <meta name="generator" content="Hugo 0.69.2" />
+        <meta name="robots" content="index,follow">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta property="og:title" content="Udacity: C&#43;&#43; for Programmers - Lesson 1">
+<meta property="og:description" content="Lesson 1: Basics 1.4 What makes C&#43;&#43; different?  works directly on hardware really strong abstraction mechanisms  1.6 Textbook  The C&#43;&#43; Programming Language - 4th Edition - good for professionals or people who already know how to code Programming: Principles and Practice Using C&#43;&#43; - 2nd Edition - good for people who don&rsquo;t know how to code A Tour of C&#43;&#43; - quick overview of C&#43;&#43; for people who already know C&#43;&#43;  1.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://vaibhaw.github.io/blog/notes/udacity-cpp-for-programmers-lesson-1/">
+        <link rel="stylesheet" href="https://vaibhaw.github.io/blog/dist/site.css">
+        <link rel="stylesheet" href="https://vaibhaw.github.io/blog/dist/syntax.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,600,700,300&subset=latin,cyrillic-ext,latin-ext,cyrillic">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+        
+        <link rel="stylesheet" href="https://vaibhaw.github.io/blog//site.css">
+
+        
+        
+    </head>
+    <body>
+        
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'XXX', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+
+        <div id="wrapper">
+            <header class="site-header">
+                <div class="container">
+                    <div class="site-title-wrapper">
+                        
+                            <a class="site-logo" title="Vaibhaw&#39;s Tech Musings" href="https://vaibhaw.github.io/blog/">
+                                <img src="https://vaibhaw.github.io/blog/logo.svg" alt="Vaibhaw&#39;s Tech Musings" />
+                            </a>
+                        
+
+                    </div>
+
+                    <ul class="site-nav">
+                        
+    <li class="site-nav-item">
+        <a title="Home" href="/blog/">Home</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a title="Projects" href="/blog/projects/">Projects</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a title="Blog" href="/blog/posts/">Blog</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a title="Notes" href="/blog/notes/">Notes</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a title="Tutorials" href="/blog/tutorials/">Tutorials</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a title="Contact" href="/blog/page/contact/">Contact</a>
+    </li>
+
+    <li class="site-nav-item">
+        <a title="About" href="/blog/page/about/">About</a>
+    </li>
+
+                    </ul>
+                </div>
+            </header>
+
+            <div id="container">
+
+
+<div class="container">
+    <article class="post-container">
+        <header class="post-header">
+    <h1 class="post-title">Udacity: C&#43;&#43; for Programmers - Lesson 1</h1>
+    
+</header>
+
+        <div class="post-content clearfix">
+    
+
+    <h2 id="lesson-1-basics">Lesson 1: Basics</h2>
+<h3 id="14-what-makes-c-different">1.4 What makes C++ different?</h3>
+<ul>
+<li>works directly on hardware</li>
+<li>really strong abstraction mechanisms</li>
+</ul>
+<h3 id="16-textbook">1.6 Textbook</h3>
+<ul>
+<li><code>The C++ Programming Language - 4th Edition</code> - good for professionals or people who already know how to code</li>
+<li><code>Programming: Principles and Practice Using C++ - 2nd Edition</code> - good for people who don&rsquo;t know how to code</li>
+<li><code>A Tour of C++</code> - quick overview of C++ for people who already know C++</li>
+</ul>
+<h3 id="17-program-structure">1.7 Program Structure</h3>
+<pre><code>#include &lt;iostream&gt;
+// &lt;&gt; tells the compiler to look in the directory where standard libraries are kept
+
+#include &quot;iostream&quot;
+// &quot;&quot; tells the compiler to look in current directory,
+// then where standard libraries are kept
+</code></pre><p>include is preprocessor directive. there can be many/other pre-processor directives too</p>
+<h3 id="18-comments">1.8 Comments</h3>
+<pre><code>// single line comment
+</code></pre><div class="highlight"><pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="c1">// comment block
+</span><span class="c1"></span><span class="cm">/*
+</span><span class="cm">...
+</span><span class="cm">...
+</span><span class="cm">*/</span>
+</code></pre></div><div class="highlight"><pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="c1">// not necessary but better to use
+</span><span class="c1"></span><span class="cm">/*
+</span><span class="cm">** ...
+</span><span class="cm">** ...
+</span><span class="cm">*/</span>
+
+</code></pre></div><h3 id="115-using-namespace">1.15 Using namespace</h3>
+<p>Use namespace to avoid writing std:: each and every time you use cout etc. but this may result into namespace collision.</p>
+<pre><code>#include &lt;iostream&gt;
+
+using namespace std;
+
+cout &lt;&lt; &quot;meh&quot; &lt;&lt; endl;
+</code></pre><p>TODO: write what&rsquo;s the best practice</p>
+<h3 id="116-writing-to-console">1.16 Writing to console</h3>
+<h4 id="writing-string-number-and-variable-together">Writing string, number and variable together</h4>
+<div class="highlight"><pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+
+<span class="kt">int</span> <span class="n">x1</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+<span class="kt">int</span> <span class="n">x2</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
+<span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;roots of x2 - 5x + 6 = 0 are &#34;</span> <span class="o">&lt;&lt;</span> <span class="n">x1</span> <span class="o">&lt;&lt;</span> <span class="s">&#34; and &#34;</span> <span class="o">&lt;&lt;</span> <span class="n">x2</span><span class="p">;</span>
+</code></pre></div><h4 id="newline-n-vs-endline-stdendl">Newline (\n) vs Endline (std::endl)</h4>
+<div class="highlight"><pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;what&#39;s going on?&#34;</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">;</span>
+<span class="c1">// OR
+</span><span class="c1"></span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;what&#39;s going on?&#34;</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+</code></pre></div><p>TODO: give source to stackoverflow discussion</p>
+<h3 id="120-sizeof">1.20 sizeof</h3>
+<pre><code>cout &lt;&lt; sizeof(int) &lt;&lt; endl;
+</code></pre><p>int - 4, short - 2, long - 8, float - 4, double - 8, char - 1, bool - 1 (on my machine)
+TODO: figure out whether this depends on architecture</p>
+<h3 id="122-constants">1.22 constants</h3>
+<p>constant variables can&rsquo;t be changed later in the program</p>
+<pre><code>const int age = 23;
+</code></pre><h3 id="123-enumerated-constants">1.23 enumerated constants</h3>
+<div class="highlight"><pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="c1">// define
+</span><span class="c1"></span><span class="k">enum</span> <span class="nc">MONTH</span> <span class="p">{</span><span class="n">Jan</span><span class="p">,</span> <span class="n">Feb</span><span class="p">,</span> <span class="n">Mar</span><span class="p">,</span> <span class="p">....</span> <span class="p">,</span> <span class="n">Dec</span><span class="p">}</span>
+<span class="c1">// define
+</span><span class="c1"></span><span class="n">MONTH</span> <span class="n">first</span><span class="p">;</span>
+<span class="c1">// assign
+</span><span class="c1"></span><span class="n">first</span> <span class="o">=</span> <span class="n">Jan</span><span class="p">;</span>
+
+<span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">first</span><span class="p">;</span>  <span class="c1">// 0
+</span><span class="c1"></span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">Jan</span><span class="p">;</span>  <span class="c1">// 0
+</span><span class="c1"></span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">Feb</span><span class="p">;</span>  <span class="c1">// 1
+</span></code></pre></div><p>Microsoft recommends singular for naming enums; hence MONTH not MONTHS</p>
+<h3 id="124-format-output">1.24 Format Output</h3>
+<p>&ldquo;\n&rdquo; for newline, &ldquo;\t&rdquo; for tab</p>
+<div class="highlight"><pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp">
+</span><span class="cp">#include</span> <span class="cpf">&lt;iomanip&gt;</span><span class="cp">
+</span><span class="cp"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;a&#34;</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">setw</span><span class="p">(</span><span class="mi">15</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;b&#34;</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">setw</span><span class="p">(</span><span class="mi">15</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;c&#34;</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<span class="c1">// setw = set width
+</span></code></pre></div><h3 id="125-file-io">1.25 File IO</h3>
+<blockquote>
+<ul>
+<li>Include the <!-- raw HTML omitted --> library</li>
+<li>Create a stream (input, output, both)
+<ul>
+<li>ofstream myfile; (for writing to a file)</li>
+<li>ifstream myfile; (for reading a file)</li>
+<li>fstream myfile; (for reading and writing a file)</li>
+</ul>
+</li>
+<li>Open the file  myfile.open(“filename”);</li>
+<li>Write or read the file</li>
+<li>Close the file myfile.close();</li>
+</ul>
+</blockquote>
+<div class="highlight"><pre class="chroma"><code class="language-cpp" data-lang="cpp">    <span class="n">string</span> <span class="n">line</span><span class="p">;</span>
+    <span class="c1">//create an output stream to write to the file
+</span><span class="c1"></span>    <span class="c1">//append the new lines to the end of the file
+</span><span class="c1"></span>    <span class="n">ofstream</span> <span class="nf">myfileI</span> <span class="p">(</span><span class="s">&#34;input.txt&#34;</span><span class="p">,</span> <span class="n">ios</span><span class="o">::</span><span class="n">app</span><span class="p">);</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">myfileI</span><span class="p">.</span><span class="n">is_open</span><span class="p">())</span>
+    <span class="p">{</span>
+        <span class="n">myfileI</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;</span><span class="se">\n</span><span class="s">I am adding a line.</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">;</span>
+        <span class="n">myfileI</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;I am adding another line.</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">;</span>
+        <span class="n">myfileI</span><span class="p">.</span><span class="n">close</span><span class="p">();</span>
+    <span class="p">}</span>
+    <span class="k">else</span> <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;Unable to open file for writing&#34;</span><span class="p">;</span>
+
+    <span class="c1">//create an input stream to read the file
+</span><span class="c1"></span>    <span class="n">ifstream</span> <span class="nf">myfileO</span> <span class="p">(</span><span class="s">&#34;input.txt&#34;</span><span class="p">);</span>
+    <span class="c1">//During the creation of ifstream, the file is opened. 
+</span><span class="c1"></span>    <span class="c1">//So we do not have explicitly open the file. 
+</span><span class="c1"></span>    <span class="k">if</span> <span class="p">(</span><span class="n">myfileO</span><span class="p">.</span><span class="n">is_open</span><span class="p">())</span>
+    <span class="p">{</span>
+        <span class="k">while</span> <span class="p">(</span> <span class="n">getline</span> <span class="p">(</span><span class="n">myfileO</span><span class="p">,</span><span class="n">line</span><span class="p">)</span> <span class="p">)</span>
+        <span class="p">{</span>
+            <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">line</span> <span class="o">&lt;&lt;</span> <span class="sc">&#39;\n&#39;</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="n">myfileO</span><span class="p">.</span><span class="n">close</span><span class="p">();</span>
+    <span class="p">}</span>
+
+    <span class="k">else</span> <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;Unable to open file for reading&#34;</span><span class="p">;</span>
+</code></pre></div><div class="highlight"><pre class="chroma"><code class="language-cpp" data-lang="cpp">    <span class="c1">// write at the beginning of file - overwrite
+</span><span class="c1"></span>    <span class="n">fstream</span> <span class="nf">myfileI</span> <span class="p">(</span><span class="s">&#34;input.txt&#34;</span><span class="p">,</span> <span class="n">fstream</span><span class="o">::</span><span class="n">out</span><span class="p">);</span>
+    <span class="c1">// write at the end of file - append
+</span><span class="c1"></span>    <span class="n">fstream</span> <span class="nf">myfileI</span> <span class="p">(</span><span class="s">&#34;input.txt&#34;</span><span class="p">,</span> <span class="n">fstream</span><span class="o">::</span><span class="n">app</span><span class="p">);</span>
+    <span class="c1">// read file
+</span><span class="c1"></span>    <span class="n">fstream</span> <span class="nf">myfileO</span> <span class="p">(</span><span class="s">&#34;input.txt&#34;</span><span class="p">,</span> <span class="n">fstream</span><span class="o">::</span><span class="n">out</span><span class="p">);</span>
+    <span class="c1">// read or write (append)
+</span><span class="c1"></span>    <span class="n">fstream</span> <span class="nf">myfileIO</span> <span class="p">(</span><span class="s">&#34;input.txt&#34;</span><span class="p">,</span> <span class="n">fstream</span><span class="o">::</span><span class="n">in</span> <span class="o">|</span> <span class="n">fstream</span><span class="o">::</span><span class="n">out</span> <span class="o">|</span> <span class="n">fstream</span><span class="o">::</span><span class="n">app</span><span class="p">);</span>
+</code></pre></div><p><a href="https://stackoverflow.com/a/30388637/925216">source</a>
+The first case helps with the semantics: a std::fstream could be opened in input, output or both. Because of this you need to check the declaration to be sure while using std::ifstream and std::ofstream will make it clear what you&rsquo;re doing. The second case has more room for human error which is why it should be avoided.</p>
+<p>My own rule of thumb is to use a std::fstream when you need both read and write access to the file and only in this case.</p>
+<h3 id="132-user-input">1.32 User Input</h3>
+<div class="highlight"><pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="c1">// for writing to the console
+</span><span class="c1"></span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;meh&#34;</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+<span class="c1">// for reading from the console
+</span><span class="c1"></span><span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">x</span><span class="p">;</span>
+<span class="c1">// write to console, whatever we read
+</span><span class="c1"></span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">x</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+</code></pre></div><p><code>cin</code> assigns value in buffer to variables. This is called extraction.
+It doesn&rsquo;t validate the input with variable type and also treats whitespace as end of input. Because of this behaviour it breaks sentences to words and assigns incorrectly.</p>
+<h3 id="135-string-input">1.35 String Input</h3>
+<p><code>getline</code> reads characters from <code>std::cin</code> until newline or &ldquo;\n&rdquo; is detected and assigns to input</p>
+<div class="highlight"><pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="n">std</span><span class="o">::</span><span class="n">getline</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">cin</span><span class="p">,</span> <span class="n">variableName</span><span class="p">)</span>
+</code></pre></div><h3 id="138-stringstream">1.38 StringStream</h3>
+<p>Convert string variable to other variable types such as int, float etc.</p>
+<div class="highlight"><pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="cp">#include</span> <span class="cpf">&lt;sstream&gt;</span><span class="cp">
+</span><span class="cp"></span><span class="n">std</span><span class="o">::</span><span class="n">getline</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">cin</span><span class="p">,</span> <span class="n">stringVariable</span><span class="p">);</span>
+<span class="n">std</span><span class="o">::</span><span class="n">stringstream</span><span class="p">(</span><span class="n">stringVariable</span><span class="p">)</span> <span class="o">&gt;&gt;</span> <span class="n">numericVariable</span><span class="p">;</span>
+</code></pre></div>
+</div>
+
+        <footer class="post-footer clearfix">
+    
+        <p class="post-tags">
+            <span>Tagged:</span>
+            
+            
+                <a href="/blog/tags/c&#43;&#43;/">C&#43;&#43;</a>, 
+            
+                <a href="/blog/tags/udacity/">Udacity</a>, 
+            
+                <a href="/blog/tags/mooc/">MOOC</a>
+            
+        </p>
+    
+
+    <div class="share">
+        
+            <a class="icon-twitter" href="https://twitter.com/share?text=Udacity%3a%20C%2b%2b%20for%20Programmers%20-%20Lesson%201&url=https%3a%2f%2fvaibhaw.github.io%2fblog%2fnotes%2fudacity-cpp-for-programmers-lesson-1%2f"
+                onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                <i class="fa fa-twitter"></i>
+                <span class="hidden">Twitter</span>
+            </a>
+        
+
+        
+            <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fvaibhaw.github.io%2fblog%2fnotes%2fudacity-cpp-for-programmers-lesson-1%2f"
+                onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                <i class="fa fa-facebook"></i>
+                <span class="hidden">Facebook</span>
+            </a>
+        
+
+        
+        
+            <a class="icon-linkedin" href="https://www.linkedin.com/shareArticle?mini=true&title=Udacity%3a%20C%2b%2b%20for%20Programmers%20-%20Lesson%201&url=https%3a%2f%2fvaibhaw.github.io%2fblog%2fnotes%2fudacity-cpp-for-programmers-lesson-1%2f&summary="
+               onclick="window.open(this.href, 'linkedin-share', 'width=554,height=481');return false;">
+               <i class="fa fa-linkedin"></i>
+               <span class="hidden">LinkedIn</span>
+            </a>
+        
+    </div>
+</footer>
+    </article>
+</div>
+
+            </div>
+        </div>
+
+        <footer class="footer">
+            <div class="container">
+                <div class="site-title-wrapper">
+                    <h1 class="site-title">
+                        <a title="Vaibhaw&#39;s Tech Musings" href="https://vaibhaw.github.io/blog/">Vaibhaw&#39;s Tech Musings</a>
+                    </h1>
+                    <a class="button-square" href="https://vaibhaw.github.io/blog/index.xml"><i class="fa fa-rss"></i></a>
+                    
+                        <a class="button-square button-social hint--top" data-hint="Github" title="Github" href="https://github.com/vaibhaw" rel="me">
+                            <i class="fa fa-github-alt"></i>
+                        </a>
+                    
+
+                    
+                        <a class="button-square button-social hint--top" data-hint="Gitlab" title="Gitlab" href="https://gitlab.com/vaibhaw" rel="me">
+                            <i class="fa fa-gitlab"></i>
+                        </a>
+                    
+
+                    
+                        <a class="button-square button-social hint--top" data-hint="Stack Overflow" title="Stack Overflow" href="https://stackoverflow.com/users/875484/vaibhaw" rel="me">
+                            <i class="fa fa-stack-overflow"></i>
+                        </a>
+                    
+
+                    
+                        <a class="button-square button-social hint--top" data-hint="Twitter" title="Twitter" href="https://twitter.com/vaibhaw" rel="me">
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                    
+                    
+                        <a class="button-square button-social hint--top" data-hint="Facebook" title="Facebook" href="https://www.facebook.com/vaibhaw" rel="me">
+                            <i class="fa fa-facebook"></i>
+                        </a>
+                    
+
+                    
+                        <a class="button-square button-social hint--top" data-hint="Last.fm" title="Last.fm" href="https://www.last.fm/user/vaibhawchandel" rel="me">
+                            <i class="fa fa-lastfm"></i>
+                        </a>
+                    
+
+                    
+                        <a class="button-square button-social hint--top" data-hint="8tracks" title="8tracks" href="https://8tracks.com/vaibhaw" rel="me">
+                            <i class="fa fa-music"></i>
+                        </a>
+                                            
+
+                    
+                        <a class="button-square button-social hint--top" data-hint="LinkedIn" title="LinkedIn" href="https://linkedin.com/in/vaibhaw/" rel="me">
+                            <i class="fa fa-linkedin"></i>
+                        </a>
+                    
+                    
+                        <a class="button-square button-social hint--top" data-hint="Email" title="Email" href="mailto:chandel.vaibhaw@gmail.com">
+                            <i class="fa fa-envelope"></i>
+                        </a>
+                    
+
+                    <a class="button-square button-jump-top js-jump-top" href="#">Top
+                        <i class="fa fa-angle-up"></i>
+                    </a>
+
+                </div>
+
+                <p class="footer-copyright">
+                    <span class="footer-copyright-left">&copy; 2020 Vaibhaw Chandel</span>
+                
+                    <span class="footer-copyright-right">
+                        Powered by <a href="https://gohugo.io/">Hugo</a> | 
+                        Theme: <a href="https://github.com/jbub/ghostwriter">Ghostwriter</a>
+                    </span>
+                </p>
+            </div>
+        </footer>
+
+        <script src="https://vaibhaw.github.io/blog/js/jquery-1.11.3.min.js"></script>
+        <script src="https://vaibhaw.github.io/blog/js/jquery.fitvids.js"></script>
+        <script src="https://vaibhaw.github.io/blog/js/scripts.js"></script>
+    </body>
+</html>
+

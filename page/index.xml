@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Pages on Vaibhaw&#39;s Tech Musings</title>
+    <link>https://vaibhaw.github.io/blog/page/</link>
+    <description>Recent content in Pages on Vaibhaw&#39;s Tech Musings</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Vaibhaw Singh Chandel</copyright>
+    <lastBuildDate>Fri, 15 May 2020 03:16:43 -0400</lastBuildDate>
+    
+	<atom:link href="https://vaibhaw.github.io/blog/page/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Contact</title>
+      <link>https://vaibhaw.github.io/blog/page/contact/</link>
+      <pubDate>Fri, 15 May 2020 03:16:43 -0400</pubDate>
+      
+      <guid>https://vaibhaw.github.io/blog/page/contact/</guid>
+      <description> email chandel.vaibhaw@gmail.com linkedin https://linkedin.com/in/vaibhaw/  </description>
+    </item>
+    
+    <item>
+      <title>Vaibhaw Chandel</title>
+      <link>https://vaibhaw.github.io/blog/page/about/</link>
+      <pubDate>Fri, 15 May 2020 03:16:29 -0400</pubDate>
+      
+      <guid>https://vaibhaw.github.io/blog/page/about/</guid>
+      <description>I&amp;rsquo;m a software engineer who is constantly yearning to learn new stuff and trying to scratch that programming itch.</description>
+    </item>
+    
+  </channel>
+</rss>

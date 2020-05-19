@@ -1,0 +1,28 @@
+/* fix for page-title.font-size */
+.post-title, .page-title { font-size: 24px; font-weight: 700; margin: 15px 0; text-align: center; text-transform: uppercase; }
+
+/* fix for .site-nav-item.font-size */
+.site-nav-item { display: inline-block; font-size: 24px; font-weight: 700; margin: 0 10px; }
+
+/* didn't work */
+.site-logo { float: left; display: block; }
+
+/* reduce space after paragraph */
+p { line-height: 1.8; margin: 0 0 10px; }
+
+/* removed padding under post-header */
+.post-header { padding: 0 0 0 0px;  }
+
+/* reduce footer height */
+.footer { height: 165px; margin-top: 35px;  }
+.footer .site-title-wrapper { margin: 35px auto 35px; }
+#wrapper { height: auto; min-height: 100%; margin-bottom: -165px; }
+
+/* align copyright & powered by */
+.footer-copyright-left { float: left; }
+.footer-copyright-right { float: right; }
+
+/* reduce size of date in post-stub */
+.post-stub-tag { border-radius: 3px; float: auto; font-size: 12px; margin: 2px 5px 0 0; text-transform: lowercase; }
+.post-stub-date { font-size: 14px; float: right;}
+.post-stub-date:before { content: ""; }
