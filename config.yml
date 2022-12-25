@@ -43,7 +43,7 @@ params:
   headline: ""
   title: My encounters with programming, technology and gadgets
   # enabling description => ugly uppercase text
-  description: My encounters with programming, technology and gadgets
+  # description: My encounters with programming, technology and gadgets
   github: "https://github.com/vaibhaw"
   gitlab: "https://gitlab.com/vaibhaw"
   linkedin: "https://linkedin.com/in/vaibhaw/"
